@@ -1,0 +1,22 @@
+{
+  "name": "elitetext",
+  "version": "1.0.0",
+  "description": "A test-based version of Elite Dangerous",
+  "main": "elite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerJStaples/EliteText.git"
+  },
+  "author": "Tyler Staples",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerJStaples/EliteText/issues"
+  },
+  "homepage": "https://github.com/TylerJStaples/EliteText#readme",
+  "dependencies": {
+    "inquirer": "^6.0.0"
+  }
+}
