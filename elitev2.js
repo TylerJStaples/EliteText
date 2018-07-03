@@ -31,7 +31,7 @@ inquirer.prompt([
     }
     else if (align.align === "Independent"){
         console.log("Not aligned");
-        character.alignment = "none";
+        character.alignment = "None";
     }
     else if (align.align === "Alliance"){
         console.log("Aligned with the Alliance");
@@ -86,6 +86,36 @@ inquirer.prompt([
             }
             else {
                 console.log("error");
+            }
+        });
+    }
+    else if (character.alignment === "Alliance"){
+        console.log("Pledged to Edmund Mahon");
+    }
+    else if (character.alignment === "Independent"){
+        inquirer.prompt([
+            {
+                name: "power",
+                type: "list",
+                message: "Who would you like to pledge to?",
+                choices: ["Li Yong-Rui", "Archon Delaine", "Pranav Antal", "None"]
+            }
+        ]).then(function(power){
+            character.pledged = power.power;
+            if (character.pledged === "Li Yong-Rui"){
+                console.log("The Scientist");
+            }
+            else if (character.pledged === "Archon Delaine"){
+                console.log("The Fighter");
+            }
+            else if (character.pledged === "Pranav Antal"){
+                console.log("The Utopian");
+            }
+            else if (character.pledged === "None"){
+                console.log("Fine, fucking pacafist");
+            }
+            else{
+                console.log("Shit went wrong");
             }
         });
     }
